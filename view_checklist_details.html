@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Checklist Details</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>View Checklist Details</h1>
+        <form id="view-form">
+            <label for="name">Property Address:</label>
+            <input type="text" id="name" name="name" disabled>
+            <table>
+                <thead>
+                    <tr>
+                        <th>WOC</th>
+                        <th>Yes</th>
+                        <th>No</th>
+                        <th>NA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Does the order log information match as per the LOE uploaded in Anow?</td>
+                        <td><input type="checkbox" name="q1_yes" disabled></td>
+                        <td><input type="checkbox" name="q1_no" disabled></td>
+                        <td><input type="checkbox" name="q1_na" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>Have I read the Anow notes and report requirements provided by the Appraiser?</td>
+                        <td><input type="checkbox" name="q2_yes" disabled></td>
+                        <td><input type="checkbox" name="q2_no" disabled></td>
+                        <td><input type="checkbox" name="q2_na" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>Is purchase contract available? if the order is a purchase transaction</td>
+                        <td><input type="checkbox" name="q3_yes" disabled></td>
+                        <td><input type="checkbox" name="q3_no" disabled></td>
+                        <td><input type="checkbox" name="q3_na" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>Is the recent purchase price referred with counteroffer/amendment & used in the report?</td>
+                        <td><input type="checkbox" name="q4_yes" disabled></td>
+                        <td><input type="checkbox" name="q4_no" disabled></td>
+                        <td><input type="checkbox" name="q4_na" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>Have I informed admin about missing docs or data mismatch for updated LOE?</td>
+                        <td><input type="checkbox" name="q5_yes" disabled></td>
+                        <td><input type="checkbox" name="q5_no" disabled></td>
+                        <td><input type="checkbox" name="q5_na" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>Have the supporting docs been pulled out as per the LOE address?</td>
+                        <td><input type="checkbox" name="q6_yes" disabled></td>
+                        <td><input type="checkbox" name="q6_no" disabled></td>
+                        <td><input type="checkbox" name="q6_na" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>Have I considered the Owner Name from the Title Policy? If the Title document is received.</td>
+                        <td><input type="checkbox" name="q7_yes" disabled></td>
+                        <td><input type="checkbox" name="q7_no" disabled></td>
+                        <td><input type="checkbox" name="q7_na" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>Have I checked contract/supporting docs if the subject has two Lots? if so have I included both the parcel details in the report</td>
+                        <td><input type="checkbox" name="q8_yes" disabled></td>
+                        <td><input type="checkbox" name="q8_no" disabled></td>
+                        <td><input type="checkbox" name="q8_na" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>Has the correct template been merged as per the form type given in the LOE & Client/Lender details updated as same as LOE?.</td>
+                        <td><input type="checkbox" name="q9_yes" disabled></td>
+                        <td><input type="checkbox" name="q9_no" disabled></td>
+                        <td><input type="checkbox" name="q9_na" disabled></td>
+                    </tr>
+                    <tr>
+                    
+                        <td>Have I searched & entered the co-borrower name in the report? If any</td>
+                        <td><input type="checkbox" name="q10_yes" disabled></td>
+                        <td><input type="checkbox" name="q10_no" disabled></td>
+                        <td><input type="checkbox" name="q10_na" disabled></td>
+                    </tr>
+                    <tr>
+                    
+                        <td>Have I uploaded the recent Appraiser license & E&O?</td>
+                        <td><input type="checkbox" name="q11_yes" disabled></td>
+                        <td><input type="checkbox" name="q11_no" disabled></td>
+                        <td><input type="checkbox" name="q11_na" disabled></td>
+                    </tr>
+                    <tr>
+                    
+                        <td>Have I checked RWTS tag and updated Trainee Appraiser as per Anow?</td>
+                        <td><input type="checkbox" name="q12_yes" disabled></td>
+                        <td><input type="checkbox" name="q12_no" disabled></td>
+                        <td><input type="checkbox" name="q12_na" disabled></td>
+                    </tr>
+                    <tr>
+                    
+                        <td>Have I uploaded supporting docs in workfile & Anow?</td>
+                        <td><input type="checkbox" name="q13_yes" disabled></td>
+                        <td><input type="checkbox" name="q13_no" disabled></td>
+                        <td><input type="checkbox" name="q13_na" disabled></td>
+                    </tr>
+                    <tr>
+                    
+                        <td>Have I marked the complete file prep status & hit 'start' button in Anow?</td>
+                        <td><input type="checkbox" name="q14_yes" disabled></td>
+                        <td><input type="checkbox" name="q14_no" disabled></td>
+                        <td><input type="checkbox" name="q14_na" disabled></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="button" onclick="enableEditing()">Edit Checklist</button>
+            <button type="submit" id="save-button" style="display:none;">Save</button>
+            <button type="button" onclick="location.href='index.html'">Back</button>
+            <button type="button" id="print-pdf">Print PDF</button>
+        </form>
+    </div>
+    <script src="js/view_checklist_details.js"></script>
+    
+</body>
+</html>
